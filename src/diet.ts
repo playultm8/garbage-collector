@@ -67,6 +67,11 @@ function eatSafe(qty: number, item: Item) {
   if (!eat(qty, item)) throw "Failed to eat safely";
 }
 
+/**
+ * Function that casts Ode to Booze and drinks an item if it will not make the user overdrink.
+ * @param qty # to drink
+ * @param item booze to drink
+ */
 function drinkSafe(qty: number, item: Item) {
   const prevDrunk = myInebriety();
   acquire(qty, item);
