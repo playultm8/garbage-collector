@@ -419,6 +419,8 @@ export function printHelpMenu(): void {
     |    nobarf    | garbo will do beginning of the day setup, embezzlers, and various daily flags, but will           |
     |              |  terminate before normal Barf Mountain turns.                                                     |
     +--------------+---------------------------------------------------------------------------------------------------+
+    |     diet     | garbo will only eat, drink, and fill spleen as if you were going to Barf, and then terminate.          |
+    +--------------+---------------------------------------------------------------------------------------------------+
     |    ascend    | garbo will operate under the assumption that you're ascending after running it, rather than       |
     |              |  experiencing rollover. It will use borrowed time, it won't charge stinky cheese items, etc.      |
     +--------------+---------------------------------------------------------------------------------------------------+
