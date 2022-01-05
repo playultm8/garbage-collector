@@ -35,6 +35,7 @@ import {
   $item,
   $items,
   $location,
+  $monster,
   $skill,
   Bandersnatch,
   bestLibramToCast,
@@ -497,7 +498,9 @@ export function pillkeeperOpportunityCost(): number {
   // Can't fight an embezzler without treasury access
   // If we have no other way to start a chain, returns 50k to represent the cost of a pocket wish
   return canAdv($location`Cobb's Knob Treasury`, false)
-    ? (ChateauMantegna.have() && !ChateauMantegna.paintingFought()) ||
+    ? (ChateauMantegna.have() &&
+        !ChateauMantegna.paintingFought() &&
+        ChateauMantegna.paintingMonster() === $monster`Knob Goblin Embezzler`) ||
       (have($item`Clan VIP Lounge key`) && !get("_photocopyUsed"))
       ? 15000
       : WISH_VALUE
